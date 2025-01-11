@@ -31,6 +31,11 @@ const ToggleButton = styled.button`
   display: flex;
   justify-content: center;
   align-content: center;
+
+  @media (max-width: 900px){
+  top: -285px;
+    left: 175px;
+  }
 `;
 
 const Toggler: React.FC = () => {

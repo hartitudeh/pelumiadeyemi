@@ -28,30 +28,6 @@ const LeftSideWrapper = styled.div`
   }
 `;
 
-// const NavItem = styled.div`
-//   display: flex;
-//   align-items: center;
-//   flex-direction: column;
-//   justify: flex-start;
-//   gap: 1rem;
-//   padding: 1rem;
-//   font-size: 1rem;
-//   // background-color: ${({ isActive }) => (isActive ? "#00c4f4" : "transparent")};
-//   // color: ${({ isActive }) => (isActive ? "#fff" : "#cfcfcf")};
-//   cursor: pointer;
-//   border-radius: 5px;
-//   transition: background-color 0.3s ease, color 0.3s ease;
-
-//   &:hover {
-//     background-color: #00c4f4;
-//     color: #fff;
-//   }
-
-//   @media (max-width: 900px){
-//   flex-direction: row;
-//   }
-// `;
-
 const Box = styled.div`
 background: #fff;
 border-radius: 50%;
@@ -67,14 +43,6 @@ border: 1px solid;
 
 const LeftSide = () => {
   const { isMobile } = useScreenResolution();
-
-  //   const router = useRouter();
-
-  // const navItems = [
-  //   { id: 1, text: "Portfolio", icon: "", link: "/dashboard" },
-  //   { id: 2, text: "About Me", icon: "", link: "/dashboard/affiliate" },
-  //   { id: 3, text: "Article", icon: "<FaGamepad />", link: "/dashboard/games" },
-  // ];
 
   return (
     <>
@@ -149,14 +117,6 @@ const LeftSide = () => {
             display: isMobile ? "none" : "flex",
           }}
         />
-        {/* {navItems.map((item) => (
-          <Link key={item.id} href={item.link}>
-              <NavItem>
-              {item.icon}
-              {item.text}
-              </NavItem>
-          </Link>
-        ))} */}
 
         <Flex
           justify="center"
@@ -179,7 +139,7 @@ const LeftSide = () => {
         <Flex justify={isMobile ? "flex-start" : "center"} align={isMobile ? "flex-start" : "center"} direction={isMobile ? "row" : "column"} gap="1rem" styles={{
           marginTop: isMobile ? "1rem" : "1.5rem",
         }}>
-          <Flex direction="row" justify={isMobile ? "flex-end" : "flex-start"} gap="1rem">
+          <Flex direction="row" justify={isMobile ? "center" : "flex-start"} gap="1rem">
             <Box>
             <FaLinkedin size={25} color="#000" />
             </Box>
