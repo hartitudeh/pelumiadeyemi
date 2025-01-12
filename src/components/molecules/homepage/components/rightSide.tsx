@@ -329,7 +329,7 @@ const RightSide = () => {
              <Flex justify="flex-start" direction="column">
                     <h3 style={{margin: "2rem 0 1.2rem", fontSize: isMobile ? "1.2rem" : "1.5rem"}}>
                         <strong>Grace College of Education / </strong> 
-                        <em style={{color: "#686868"}}>Frontend Engineer</em>
+                        <em style={{color: "#686868"}}>ICT Official</em>
                     </h3>
              <ul style={{
                 display: "flex",

@@ -25,6 +25,7 @@ const LeftSideWrapper = styled.div`
     margin: 0;
     position: relative;
     padding: 0;
+    margin-bottom: 5rem;
   }
 `;
 
@@ -136,7 +137,7 @@ const LeftSide = () => {
           </Link>
         </Flex>
 
-        <Flex justify={isMobile ? "flex-start" : "center"} align={isMobile ? "flex-start" : "center"} direction={isMobile ? "row" : "column"} gap="1rem" styles={{
+        <Flex justify={isMobile ? "flex-start" : "center"} align="center" direction={isMobile ? "row" : "column"} gap="1rem" styles={{
           marginTop: isMobile ? "1rem" : "1.5rem",
         }}>
           <Flex direction="row" justify={isMobile ? "center" : "flex-start"} gap="1rem">

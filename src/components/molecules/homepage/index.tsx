@@ -20,7 +20,7 @@ const Portfolio = () => {
       <Flex
         align="center"
         justify="flex-start"
-        gap={isMobile ? "5rem" : "0"}
+        gap={isMobile ? "1rem" : "0"}
         direction={isMobile ? "column" : "row"}
         styles={{}}
       >

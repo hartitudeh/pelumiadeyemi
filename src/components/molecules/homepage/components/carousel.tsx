@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import SlideOne from "/public/img/banner/slide.jpeg";
+import SlideOne from "/public/img/banner/slide.png";
 import SlideTwo from "/public/img/banner/slide1.jpeg";
 import SlideThree from "/public/img/banner/slide2.jpg";
 import Image from "@/components/atoms/image";
@@ -14,8 +14,8 @@ const cardData = [
   {
     id: 1,
     image: SlideOne,
-    languages: ["Next.js", "TypeScript", "SCSS", "React-Query"],
-    apis: ["API", "Authentication/Authorization", "React Email", "Shadcn UI"],
+    languages: ["JavaScript", "SASS", "React.js", "Next.js", "Boostrap5"],
+    apis: [],
     features: [
       "Fullstack project including backend built with (Express.js) and frontend built with (Next.js)",
       "Beautiful UI and animations",
@@ -27,7 +27,7 @@ const cardData = [
       "Checkout feature",
       "User's wishlist",
     ],
-    link: "https://example.com/project2"
+    link: "https://www.restoraweb.com"
   },
   {
     id: 2,
@@ -92,6 +92,8 @@ const InfoOverlay = styled.div`
   transform: translateY(100%);
   transition: all 0.5s ease-in-out;
   border-radius: 16px;
+
+  overflow: scroll;
 `;
 
 const PillContainer = styled.div`
