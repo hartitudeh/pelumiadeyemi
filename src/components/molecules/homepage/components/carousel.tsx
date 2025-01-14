@@ -6,9 +6,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SlideOne from "/public/img/banner/slide.png";
-import SlideTwo from "/public/img/banner/slide1.jpeg";
-import SlideThree from "/public/img/banner/slide2.jpg";
+import SlideTwo from "/public/img/banner/slide2.png";
+import SlideThree from "/public/img/banner/slide3.png";
+import SlideFour from "/public/img/banner/slide4.png";
+import SlideFive from "/public/img/banner/slide5.png";
 import Image from "@/components/atoms/image";
+import { useScreenResolution } from "@/components/atoms/useScreenResolution";
 
 const cardData = [
   {
@@ -17,37 +20,46 @@ const cardData = [
     languages: ["JavaScript", "SASS", "React.js", "Next.js", "Boostrap5"],
     apis: [],
     features: [
-      "Fullstack project including backend built with (Express.js) and frontend built with (Next.js)",
+      "A platform that bring your dreams to reality",
       "Beautiful UI and animations",
-      "Register / Login",
-      "Reset Password",
-      "JWT Refresh and Access Tokens",
-      "Integration with payment gateway",
-      "Cart feature",
-      "Checkout feature",
-      "User's wishlist",
     ],
-    link: "https://www.restoraweb.com"
+    link: "https://www.restoraweb.com",
   },
   {
     id: 2,
     image: SlideTwo,
-    languages: ["React.js", "JavaScript"],
-    apis: ["CoinGecko API"],
+    languages: ["React.js", "JavaScript", "TypeScript.js"],
+    apis: [],
     features: [
-      "Crypto dashboard with live data",
-      "Interactive charts",
-      "Secure wallet integration",
+      "Visa, Ticket and Stays Bokking Platform",
+      "Where users can book flight ticket, book hotels anywhere in the world.",
+      "Check for beautiful places around the world.",
     ],
-    link: "https://example.com/project2"
+    link: "https://travilify.vercel.app/",
   },
   {
     id: 3,
     image: SlideThree,
-    languages: ["Next.js", "TypeScript"],
-    apis: ["Stripe API"],
-    features: ["E-commerce platform", "Product reviews", "Payment Gateway"],
-    link: "https://example.com/project2"
+    languages: ["Next.js", "TypeScript", "Styled-Components", ],
+    apis: [],
+    features: ["A blog platform", "Read and learn", "Become a content writter"],
+    link: "https://blameless-blossoms.vercel.app/",
+  },
+  {
+    id: 4,
+    image: SlideFour,
+    languages: ["HTML", "CSS", "JavaScript"],
+    apis: [],
+    features: ["E-commerce platform", "Product reviews", ""],
+    link: "https://growwithdanny.vercel.app/",
+  },
+  {
+    id: 5,
+    image: SlideFive,
+    languages: ["HTML", "CSS", "JavaScript",],
+    apis: [],
+    features: ["Gospel platform", "Listen to music online", ""],
+    link: "https://ijobukky-gospelbata.vercel.app/",
   },
 ];
 
@@ -138,10 +150,10 @@ const Button = styled.a`
   text-decoration: none;
 `;
 
-
-
 // Project Component
 export const Project = () => {
+  const { isMobile } = useScreenResolution();
+
   const settings = {
     dots: false,
     infinite: true,
@@ -171,12 +183,16 @@ export const Project = () => {
           {cardData.map((card) => (
             <CardWrapper key={card.id}>
               {/* Image */}
-              <Image src={card.image} 
-              styles={{
-                width: "100%", 
-                border: "1px solid #fff", 
-                borderRadius: "1rem",
-                }} height={350} alt="Project Image" />
+              <Image
+                src={card.image}
+                styles={{
+                  width: "100%",
+                  border: "1px solid #fff",
+                  borderRadius: "1rem",
+                }}
+                height={isMobile ? 198 : 350}
+                alt="Project Image"
+              />
 
               {/* Hover Overlay */}
               <InfoOverlay className="info-overlay">
@@ -196,9 +212,13 @@ export const Project = () => {
                     <ListItem key={index}>{feature}</ListItem>
                   ))}
                 </List>
-                <Button href={card.link} target="_blank" rel="noopener noreferrer">
-                Preview
-              </Button>
+                <Button
+                  href={card.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Preview
+                </Button>
               </InfoOverlay>
             </CardWrapper>
           ))}

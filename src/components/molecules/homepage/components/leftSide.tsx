@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
-import Logo from "/public/img/pm.jpg";
+import PM from "/public/img/pm.jpg";
 import Link from "next/link";
 import Text from "@/components/atoms/text";
 import Flex from "@/components/atoms/flex";
@@ -51,15 +51,15 @@ const LeftSide = () => {
         <Flex
           justify="center"
           align="center"
-          gap={isMobile ? "1.5rem" : "1rem"}
+          gap={isMobile ? ".5rem" : "1rem"}
           direction={isMobile ? "column" : "row"}
           styles={{
             padding: "0 1.5rem",
           }}
         >
           <Image
-            src={Logo}
-            alt="Logo"
+            src={PM}
+            alt="My profile image"
             width={isMobile ? 250 : 140}
             height={isMobile ? 250 : 140}
             style={{

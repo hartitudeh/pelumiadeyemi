@@ -434,18 +434,27 @@ A dedicated Computer Science professional with dual certifications specializing 
              </ul>
              </Flex>
 
-             <Link href="mailto:pelumiadeyemi111@gmail.com">
-                <Text type="h1" text="Hire Me"  styles={{
-                    marginBottom: "1rem",
-                    marginTop: "2rem",
-                    width: isMobile ? "352px" : "124px",
-                    border: "1px solid",
-                    borderRadius: ".5rem",
-                    fontSize: isMobile ? "1.7rem" : "1.5rem",
-                    padding: ".5rem",
-                    textAlign: "center",
-                }} />
-             </Link>
+             <Link 
+    href="mailto:pelumiadeyemi111@gmail.com" target="_blank" 
+    style={{ textDecoration: "none" }}
+>
+    <Text 
+        type="h1" 
+        text="Hire Me"
+        styles={{
+            marginBottom: "1rem",
+            marginTop: "2rem",
+            width: isMobile ? "352px" : "124px",
+            border: "1px solid",
+            borderRadius: ".5rem",
+            fontSize: isMobile ? "1.7rem" : "1.5rem",
+            padding: ".5rem",
+            textAlign: "center",
+            cursor: "pointer"
+        }}
+    />
+</Link>
+
          </Flex>   
         </RightSideWrapper>
         </>
